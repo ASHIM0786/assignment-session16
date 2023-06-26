@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const mainArray = [];
+      
+        for (let i = 0; i < 10; i++) {
+          const subArray = [];
+          for (let j = 0; j < 5; j++) {
+            const userInput = prompt(`Enter input ${j + 1} for array ${i + 1}:`);
+            subArray.push(parseInt(userInput));
+          }
+          mainArray.push(subArray);
+        }
+      
+        console.log("originalarray:", mainArray);
+      
+        
+        mainArray.forEach((subArray) => {
+          subArray.sort((a, b) => b - a);
+        });
+      
+        console.log("descending:", mainArray);
+      </script>
+      
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cart = [
+  {
+    product: 'pen',
+    qty: 10,
+    price: 15
+  },
+  {
+    product: 'Memory Card',
+    qty: 2,
+    price: 299
+  },
+  {
+    product: 'book',
+    qty: 1,
+    price: 70
+  }
+];
+
+
+let totalAmount = cart.reduce((sum, item) => {
+  return sum + item.qty * item.price;
+}, 0);
+
+console.log("Total amount: ", totalAmount);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students = [
+  {name: "alex", phy: 89, chem: 90, bio: 91},
+  {name: "bob", phy: 81, chem: 67, bio: 78},
+  {name: "catherine", phy: 35, chem: 40, bio: 65},
+  {name: "devid", phy: 90, chem: 95, bio: 75},
+];
+
+const studentsAvg = students.map(student => {
+  const { name, phy, chem, bio } = student;
+  const avg = Math.round((phy + chem + bio) / 3);
+  return { name, avg: avg.toString() };
+});
+
+console.log(studentsAvg);
+
+
+    </script>
+    
+</body>
+</html>
